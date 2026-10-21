@@ -1,0 +1,528 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #242424;
+  background: #f6f7f8;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button {
+  font: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  background: #f6f7f8;
+  color: #242424;
+  overflow: hidden;
+}
+
+.topbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #e8e8e8;
+  background: #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #252525;
+  text-decoration: none;
+}
+
+.brand-symbol {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #f58220;
+  color: white;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.brand-text {
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: -.6px;
+}
+
+.brand-text span {
+  color: #f58220;
+  margin-left: 3px;
+}
+
+.campaign-tag {
+  margin-left: auto;
+  color: #777;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.hero {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 42px 24px 32px;
+}
+
+.eyebrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #c35d11;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f58220;
+}
+
+h1 {
+  margin: 20px 0 12px;
+  text-align: center;
+  font-size: clamp(30px, 4.5vw, 52px);
+  line-height: 1.2;
+  letter-spacing: -1.7px;
+  font-weight: 900;
+}
+
+h1 span {
+  color: #f58220;
+}
+
+.subtitle {
+  color: #666;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.campaign-notice {
+  width: fit-content;
+  margin: 25px auto 0;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: #fff0e4;
+  color: #bd5710;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .7px;
+}
+
+.campaign-notice span {
+  margin-right: 6px;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, .82fr);
+  align-items: center;
+  gap: 50px;
+  max-width: 960px;
+  margin: 35px auto 20px;
+}
+
+.wheel-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wheel-frame {
+  width: min(100%, 370px);
+  aspect-ratio: 1;
+  padding: 11px;
+  border-radius: 50%;
+  position: relative;
+  background: linear-gradient(145deg, #ffcf9e, #f58220, #ffe4c5);
+  box-shadow: 0 10px 30px #a64e1520;
+}
+
+.wheel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  background: conic-gradient(
+    from -90deg,
+    #ffbf58 0deg 252deg,
+    #27b9c8 252deg 324deg,
+    #ef6470 324deg 360deg
+  );
+  will-change: transform;
+}
+
+.wheel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  background: repeating-conic-gradient(
+    from -90deg,
+    #ffffffc9 0deg 1deg,
+    transparent 1deg 3deg
+  );
+}
+
+.wheel-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1.4;
+  pointer-events: none;
+}
+
+.wheel-label strong {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.wheel-label small {
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .8px;
+}
+
+.wheel-pointer {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  width: 40px;
+  height: 55px;
+  background: #f58220;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.wheel-pointer span {
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  width: 28px;
+  height: 35px;
+  background: #ffdfb6;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.wheel-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  width: 82px;
+  height: 82px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  background: #252525;
+  color: #fff;
+  box-shadow: 0 0 0 4px #f58220;
+}
+
+.wheel-center span {
+  color: #ffbd58;
+  font-size: 20px;
+}
+
+.wheel-center strong {
+  font-size: 12px;
+}
+
+.wheel-center small {
+  font-size: 8px;
+  color: #ddd;
+}
+
+.wheel-caption {
+  margin-top: 22px;
+  text-align: center;
+  color: #a65a1d;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.reward-card {
+  padding: 30px;
+  border: 1px solid #e7e7e7;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 30px #00000008;
+}
+
+.card-label {
+  color: #e66f17;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.reward-card h2 {
+  margin: 14px 0 8px;
+  font-size: 29px;
+  line-height: 1.4;
+  letter-spacing: -.8px;
+}
+
+.card-description {
+  color: #666;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.prize-list {
+  display: grid;
+  gap: 10px;
+  margin: 22px 0;
+}
+
+.prize-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.prize-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.prize-name {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 12px;
+}
+
+.prize-name small {
+  color: #888;
+  font-size: 10px;
+}
+
+.prize-odds {
+  margin-left: auto;
+  color: #666;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.spin-button {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #f58220;
+  color: white;
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background .2s, transform .2s;
+}
+
+.spin-button span {
+  font-size: 18px;
+}
+
+.spin-button:hover:not(:disabled) {
+  background: #df6b0e;
+  transform: translateY(-1px);
+}
+
+.spin-button:disabled {
+  cursor: not-allowed;
+  opacity: .65;
+}
+
+.played-panel {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #d7eadb;
+  border-radius: 8px;
+  background: #f0faf2;
+}
+
+.played-icon {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #218647;
+  color: white;
+  flex-shrink: 0;
+}
+
+.played-panel strong {
+  font-size: 12px;
+}
+
+.played-panel p {
+  margin: 6px 0 0;
+  color: #50715a;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.card-footnote {
+  margin-top: 14px;
+  color: #888;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+  padding: 28px 0 10px;
+  color: #666;
+  font-size: 11px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 22px 15px;
+  border-top: 1px solid #e8e8e8;
+  background: #fff;
+  color: #888;
+  font-size: 10px;
+  letter-spacing: .5px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: #17171799;
+  backdrop-filter: blur(5px);
+}
+
+.result-modal {
+  width: min(100%, 410px);
+  padding: 32px 28px;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  background: #fff;
+  color: #242424;
+  text-align: center;
+  box-shadow: 0 25px 80px #0003;
+}
+
+.result-icon {
+  margin-bottom: 15px;
+  font-size: 48px;
+}
+
+.result-modal h2 {
+  margin: 14px 0;
+  font-size: 26px;
+}
+
+.winning-value {
+  margin: 18px 0;
+  color: #f58220;
+  font-size: 42px;
+  font-weight: 900;
+}
+
+.result-description {
+  margin-bottom: 22px;
+}
+
+.demo-note {
+  display: block;
+  margin-top: 18px;
+  color: #888;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding: 30px 16px;
+  }
+
+  .main-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 440px;
+    margin-top: 30px;
+  }
+
+  .wheel-frame {
+    width: min(84vw, 350px);
+  }
+
+  .reward-card {
+    padding: 24px;
+  }
+
+  .campaign-tag {
+    font-size: 8px;
+    letter-spacing: .5px;
+  }
+
+  .benefits {
+    gap: 12px;
+    font-size: 10px;
+  }
+}
