@@ -441,7 +441,7 @@ export default function App() {
             </p>
 
             <div className="voucher-ticket">
-              <span>VOUCHER ĂN UỐNG</span>
+              <span>VOUCHER</span>
               <strong>{money(result.value)}</strong>
               <small>Dành cho những bữa ăn thật vui</small>
             </div>
