@@ -3,10 +3,9 @@ import { useEffect, useRef, useState } from "react";
 // Lượt quay được kiểm tra và lưu theo số điện thoại trên máy chủ MongoDB.
 
 const VOUCHERS = [
-  { value: 100000, label: "100K", color: "#e1f3ed", probability: 60 },
-  { value: 200000, label: "200K", color: "#fff0d5", probability: 15 },
-  { value: 300000, label: "300K", color: "#eee7fb", probability: 10 },
-  { value: 400000, label: "400K", color: "#dcecff", probability: 10 },
+  { value: 200000, label: "200K", color: "#e1f3ed", probability: 60 },
+  { value: 300000, label: "300K", color: "#fff0d5", probability: 20 },
+  { value: 400000, label: "400K", color: "#eee7fb", probability: 15 },
   { value: 500000, label: "500K", color: "#ffe1dc", probability: 5 },
 ];
 
@@ -208,13 +207,13 @@ export default function App() {
             <span style={{color: "#0877FB"}} /> FOOD & GOOD with SOUNDHUB
           </span>
 
-          <h1>
-            Bữa ngon hôm nay,
+          <h1 style={{color: "#396b56"}}>
+            Vòng quay may mắn
             <br />
-            <span>may mắn trong tay.</span>
+            {/* <span>may mắn trong tay.</span> */}
           </h1>
 
-          <p>Quay một vòng, nhận voucher ăn uống thật ngon!</p>
+          <p>Wishing you a beautiful day ahead!</p>
 
           <span className="once-badge">
             ✦ Just once per person.
@@ -327,7 +326,7 @@ export default function App() {
           ))}
         </div>
 
-        <div style={{ margin: 15 } }>
+        {/* <div style={{ margin: 15 } }>
           <p style={{ fontWeight: 700, marginBottom:15, color:"#286F59" }}>Voucher thương hiệu</p>
 
           <div className="prize-list">
@@ -357,7 +356,7 @@ export default function App() {
           <span>(Có thể đổi thành card nạp điện thoại)</span>
 
 
-        </div>
+        </div> */}
 
         {result && !spinning && (
           <div className="last-result">
@@ -387,7 +386,7 @@ export default function App() {
             onClick={(event) => event.stopPropagation()}
           >
             <span className="gift-icon" aria-hidden="true">🎁</span>
-            <p className="modal-eyebrow">FOOD & GOOD WITH SOUNDHUB</p>
+            <p className="modal-eyebrow">SOUNDHUB</p>
             <h2 id="phone-title">Nhập số điện thoại</h2>
             <p>Số điện thoại mua laptop của bạn.</p>
             <form onSubmit={checkPhone}>
