@@ -436,14 +436,14 @@ export default function App() {
             <p className="modal-eyebrow">MAY MẮN GỌI TÊN BẠN</p>
             <h2 id="result-title">Chúc mừng bạn!</h2>
 
-            <p id="result-description">
+            {/* <p id="result-description">
               Bữa ngon sắp tới đã có thêm một món quà.
-            </p>
+            </p> */}
 
             <div className="voucher-ticket">
               <span>VOUCHER</span>
               <strong>{money(result.value)}</strong>
-              <small>Dành cho những bữa ăn thật vui</small>
+              {/* <small>Dành cho những bữa ăn thật vui</small> */}
             </div>
 
             <button
