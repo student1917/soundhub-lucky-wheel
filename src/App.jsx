@@ -3,9 +3,10 @@ import { useEffect, useRef, useState } from "react";
 // Lượt quay được kiểm tra và lưu theo số điện thoại trên máy chủ MongoDB.
 
 const VOUCHERS = [
-  { value: 200000, label: "200K", color: "#e1f3ed", probability: 60 },
-  { value: 300000, label: "300K", color: "#fff0d5", probability: 20 },
-  { value: 400000, label: "400K", color: "#eee7fb", probability: 15 },
+  { value: 100000, label: "100K", color: "#e1f3ed", probability: 60 },
+  { value: 200000, label: "200K", color: "#fff0d5", probability: 15 },
+  { value: 300000, label: "300K", color: "#eee7fb", probability: 10 },
+  { value: 400000, label: "400K", color: "#dcecff", probability: 10 },
   { value: 500000, label: "500K", color: "#ffe1dc", probability: 5 },
 ];
 
@@ -326,7 +327,7 @@ export default function App() {
           ))}
         </div>
 
-        {/* <div style={{ margin: 15 } }>
+        <div style={{ margin: 15 } }>
           <p style={{ fontWeight: 700, marginBottom:15, color:"#286F59" }}>Voucher thương hiệu</p>
 
           <div className="prize-list">
@@ -356,7 +357,7 @@ export default function App() {
           <span>(Có thể đổi thành card nạp điện thoại)</span>
 
 
-        </div> */}
+        </div>
 
         {result && !spinning && (
           <div className="last-result">
