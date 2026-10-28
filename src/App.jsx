@@ -2,12 +2,20 @@ import { useEffect, useRef, useState } from "react";
 
 // Lượt quay được kiểm tra và lưu theo số điện thoại trên máy chủ MongoDB.
 
+// const VOUCHERS = [
+//   { value: 100000, label: "100K", color: "#e1f3ed", probability: 60 },
+//   { value: 200000, label: "200K", color: "#fff0d5", probability: 15 },
+//   { value: 300000, label: "300K", color: "#eee7fb", probability: 10 },
+//   { value: 400000, label: "400K", color: "#dcecff", probability: 10 },
+//   { value: 500000, label: "500K", color: "#ffe1dc", probability: 5 },
+// ];
+
+
 const VOUCHERS = [
-  { value: 100000, label: "100K", color: "#e1f3ed", probability: 60 },
-  { value: 200000, label: "200K", color: "#fff0d5", probability: 15 },
-  { value: 300000, label: "300K", color: "#eee7fb", probability: 10 },
-  { value: 400000, label: "400K", color: "#dcecff", probability: 10 },
-  { value: 500000, label: "500K", color: "#ffe1dc", probability: 5 },
+  { value: 200000, label: "200K", color: "#fff0d5", probability: 30 },
+  { value: 300000, label: "300K", color: "#eee7fb", probability: 30 },
+  { value: 400000, label: "400K", color: "#dcecff", probability: 20 },
+  { value: 500000, label: "500K", color: "#ffe1dc", probability: 20 },
 ];
 
 const money = (value) => value.toLocaleString("vi-VN") + "đ";

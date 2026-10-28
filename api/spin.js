@@ -3,12 +3,20 @@ import { randomInt } from "node:crypto";
 
 const CAMPAIGN_ID = "soundhub-v2";
 
+// const VOUCHERS = [
+//   { value: 100000, label: "100K", probability: 60 },
+//   { value: 200000, label: "200K", probability: 15 },
+//   { value: 300000, label: "300K", probability: 10 },
+//   { value: 400000, label: "400K", probability: 10 },
+//   { value: 500000, label: "500K", probability: 5 },
+// ];
+
+
 const VOUCHERS = [
-  { value: 100000, label: "100K", probability: 60 },
-  { value: 200000, label: "200K", probability: 15 },
-  { value: 300000, label: "300K", probability: 10 },
-  { value: 400000, label: "400K", probability: 10 },
-  { value: 500000, label: "500K", probability: 5 },
+  { value: 200000, label: "200K", probability: 30 },
+  { value: 300000, label: "300K", probability: 30 },
+  { value: 400000, label: "400K", probability: 20 },
+  { value: 500000, label: "500K", probability: 20 },
 ];
 
 async function getSpinsCollection() {
